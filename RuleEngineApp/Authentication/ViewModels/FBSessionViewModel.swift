@@ -19,10 +19,8 @@ final class FBSessionViewModel: ObservableObject {
         
     init() {
         listener = Auth.auth().addStateDidChangeListener { [weak self] _, user in
-            DispatchQueue.main.async {
-                self?.isLoggedIn = (user != nil)
-                self?.isLoadingSession = false
-            }
+            self?.isLoggedIn = (user != nil)
+            self?.isLoadingSession = false
         }
     }
 

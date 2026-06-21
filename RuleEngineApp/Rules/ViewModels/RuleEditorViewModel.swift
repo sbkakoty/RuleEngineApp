@@ -9,8 +9,7 @@ import Foundation
 import Combine
 
 @MainActor
-final class RuleEditorViewModel:
-ObservableObject {
+final class RuleEditorViewModel: ObservableObject {
 
     @Published var name = ""
     @Published var field = ""

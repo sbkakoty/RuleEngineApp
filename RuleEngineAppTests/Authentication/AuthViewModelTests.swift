@@ -77,7 +77,7 @@ final class AuthViewModelTests: XCTestCase {
 
         let mockService = MockAuthService()
 
-        let viewModel = SettingsViewModel(authService: mockService)
+        let viewModel = FBAuthViewModel(authService: mockService)
 
         await viewModel.logout()
 

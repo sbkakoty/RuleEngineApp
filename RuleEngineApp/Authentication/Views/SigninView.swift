@@ -26,6 +26,7 @@ struct SigninView: View {
 }
 
 struct SigninFormContent: View {
+    
     @ObservedObject var viewModel: FBAuthViewModel
 
     var body: some View {

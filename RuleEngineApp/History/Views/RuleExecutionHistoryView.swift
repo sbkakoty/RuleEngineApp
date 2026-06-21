@@ -9,52 +9,42 @@ import SwiftUI
 
 struct RuleExecutionHistoryView: View {
 
-    @StateObject
-    var viewModel:
-        RuleExecutionHistoryViewModel
+    @StateObject var viewModel: RuleExecutionHistoryViewModel
 
     var body: some View {
 
         List {
 
-            ForEach(
-                viewModel.executions
-            ) { execution in
+            ForEach(viewModel.executions) { execution in
 
-                VStack(
-                    alignment: .leading,
-                    spacing: 8
-                ) {
+                VStack(alignment: .leading, spacing: 8) {
+
+                    Text("Event Submitted")
+                        .font(.headline)
 
                     Text(
-                        execution
-                            .executedAt,
-                        style: .date
+                        eventPayloadDescription(for: execution)
                     )
-                    .font(.headline)
+
+                    Text("Triggered Rules")
+                        .font(.headline)
+
+                    Text(execution.triggeredRules.joined(separator: ", "))
+
+                    Text("Timestamp")
+                        .font(.headline)
 
                     Text(
-                        "Triggered Rules"
+                        execution.executedAt.formatted(
+                            date: .abbreviated,
+                            time: .shortened
+                        )
                     )
 
-                    ForEach(
-                        execution
-                            .triggeredRules,
-                        id: \.self
-                    ) {
+                    Text("Execution Result")
+                        .font(.headline)
 
-                        Text("• \($0)")
-                    }
-
-                    Text("Actions")
-
-                    ForEach(
-                        execution.actions,
-                        id: \.self
-                    ) {
-
-                        Text("• \($0)")
-                    }
+                    Text(execution.triggeredRules.count > 0 ? "Success" : "No Rules Matched")
                 }
                 .padding(.vertical, 8)
             }
@@ -67,5 +57,12 @@ struct RuleExecutionHistoryView: View {
             await viewModel
                 .loadExecutions()
         }
+    }
+    
+    private func eventPayloadDescription(for execution: Execution) -> String {
+
+        execution.eventPayload
+            .map { "\($0.key): \($0.value)" }
+            .joined(separator: ", ")
     }
 }

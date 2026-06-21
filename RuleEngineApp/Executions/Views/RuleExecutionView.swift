@@ -9,9 +9,7 @@ import SwiftUI
 
 struct RuleExecutionView: View {
 
-    @StateObject
-    var viewModel:
-        RuleExecutionViewModel
+    @StateObject var viewModel: RuleExecutionViewModel
 
     var body: some View {
 

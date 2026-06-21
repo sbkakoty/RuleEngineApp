@@ -7,8 +7,7 @@
 
 import Foundation
 
-final class RuleExecutionService:
-RuleExecutionServiceProtocol {
+final class RuleExecutionService: RuleExecutionServiceProtocol {
 
     func execute(event: [String : Any], rules: [Rule]) -> ExecutionResult {
 

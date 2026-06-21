@@ -35,13 +35,13 @@
 		167B4B172FE2A0B100C5FC21 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B162FE2A0B100C5FC21 /* SigninView.swift */; };
 		167B4B192FE2A0D000C5FC21 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B182FE2A0D000C5FC21 /* RegisterView.swift */; };
 		167B4B1B2FE2A21E00C5FC21 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B1A2FE2A21E00C5FC21 /* MainTabView.swift */; };
-		167B4B1F2FE2A76E00C5FC21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 167B4B1E2FE2A76E00C5FC21 /* GoogleService-Info.plist */; };
 		167B4B272FE2AB3200C5FC21 /* RuleServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B262FE2AB3200C5FC21 /* RuleServiceProtocol.swift */; };
 		167B4B292FE2AB6800C5FC21 /* RuleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B282FE2AB6800C5FC21 /* RuleService.swift */; };
 		167B4B2B2FE2AB9200C5FC21 /* RuleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B2A2FE2AB9200C5FC21 /* RuleListViewModel.swift */; };
 		167B4B2D2FE2ABB900C5FC21 /* RuleEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B2C2FE2ABB900C5FC21 /* RuleEditorViewModel.swift */; };
 		167B4B2F2FE2ACDA00C5FC21 /* RuleDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B2E2FE2ACDA00C5FC21 /* RuleDisplayView.swift */; };
 		167B4B312FE2AD0800C5FC21 /* RuleCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B302FE2AD0800C5FC21 /* RuleCreateView.swift */; };
+		16C4E12F2FE82EB1003B8157 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16C4E12E2FE82EB1003B8157 /* GoogleService-Info.plist */; };
 		16F77D0E2FE5741A002F85A3 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F77D052FE5741A002F85A3 /* AuthViewModelTests.swift */; };
 		16F77D0F2FE5741A002F85A3 /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F77D062FE5741A002F85A3 /* MockAuthService.swift */; };
 		16F77D102FE5741A002F85A3 /* MockRuleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F77D082FE5741A002F85A3 /* MockRuleRepository.swift */; };
@@ -98,13 +98,13 @@
 		167B4B162FE2A0B100C5FC21 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
 		167B4B182FE2A0D000C5FC21 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		167B4B1A2FE2A21E00C5FC21 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		167B4B1E2FE2A76E00C5FC21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		167B4B262FE2AB3200C5FC21 /* RuleServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleServiceProtocol.swift; sourceTree = "<group>"; };
 		167B4B282FE2AB6800C5FC21 /* RuleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleService.swift; sourceTree = "<group>"; };
 		167B4B2A2FE2AB9200C5FC21 /* RuleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleListViewModel.swift; sourceTree = "<group>"; };
 		167B4B2C2FE2ABB900C5FC21 /* RuleEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEditorViewModel.swift; sourceTree = "<group>"; };
 		167B4B2E2FE2ACDA00C5FC21 /* RuleDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleDisplayView.swift; sourceTree = "<group>"; };
 		167B4B302FE2AD0800C5FC21 /* RuleCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleCreateView.swift; sourceTree = "<group>"; };
+		16C4E12E2FE82EB1003B8157 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		16F77D052FE5741A002F85A3 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
 		16F77D062FE5741A002F85A3 /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
 		16F77D082FE5741A002F85A3 /* MockRuleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRuleRepository.swift; sourceTree = "<group>"; };
@@ -192,10 +192,10 @@
 		167B4A8D2FE18C9900C5FC21 = {
 			isa = PBXGroup;
 			children = (
+				16C4E12E2FE82EB1003B8157 /* GoogleService-Info.plist */,
 				167B4ADD2FE296FC00C5FC21 /* RuleEngineApp */,
 				16F77D0D2FE5741A002F85A3 /* RuleEngineAppTests */,
 				16F77D142FE5741F002F85A3 /* RuleEngineAppUITests */,
-				167B4B1E2FE2A76E00C5FC21 /* GoogleService-Info.plist */,
 				166F403D2FE3A0070046FF9A /* Frameworks */,
 				167B4A972FE18C9900C5FC21 /* Products */,
 			);
@@ -532,7 +532,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				167B4B1F2FE2A76E00C5FC21 /* GoogleService-Info.plist in Resources */,
+				16C4E12F2FE82EB1003B8157 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

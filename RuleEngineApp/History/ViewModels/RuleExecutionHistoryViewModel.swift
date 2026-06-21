@@ -9,22 +9,15 @@ import Foundation
 import Combine
 
 @MainActor
-final class RuleExecutionHistoryViewModel:
-ObservableObject {
+final class RuleExecutionHistoryViewModel: ObservableObject {
 
-    @Published
-    var executions: [Execution] = []
+    @Published var executions: [Execution] = []
 
-    @Published
-    var isLoading = false
+    @Published var isLoading = false
 
-    private let repository:
-        RuleExecutionHistoryServiceProtocol
+    private let repository: RuleExecutionHistoryServiceProtocol
 
-    init(
-        repository:
-            RuleExecutionHistoryServiceProtocol
-    ) {
+    init(repository: RuleExecutionHistoryServiceProtocol) {
 
         self.repository = repository
     }

@@ -9,20 +9,15 @@ import SwiftUI
 
 struct RuleDisplayView: View {
 
-    @StateObject
-    var viewModel:
-        RuleListViewModel
+    @StateObject var viewModel: RuleListViewModel
 
-    private let container =
-        DependencyContainer()
+    private let container = DependencyContainer()
 
     var body: some View {
 
         List {
 
-            ForEach(
-                viewModel.rules
-            ) { rule in
+            ForEach(viewModel.rules) { rule in
 
                 NavigationLink {
 
@@ -65,8 +60,7 @@ struct RuleDisplayView: View {
 
                                     Task {
 
-                                        await viewModel
-                                            .toggleRule(
+                                        await viewModel.toggleRule(
                                                 rule
                                             )
                                     }
@@ -80,8 +74,7 @@ struct RuleDisplayView: View {
 
                 Task {
 
-                    await viewModel
-                        .deleteRule(
+                    await viewModel.deleteRule(
                             at: offsets
                         )
                 }
@@ -114,8 +107,7 @@ struct RuleDisplayView: View {
         }
         .task {
 
-            await viewModel
-                .loadRules()
+            await viewModel.loadRules()
         }
     }
 }

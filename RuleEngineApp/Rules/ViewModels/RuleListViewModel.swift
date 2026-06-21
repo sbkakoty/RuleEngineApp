@@ -10,8 +10,7 @@ import Combine
 import SwiftUI
 
 @MainActor
-final class RuleListViewModel:
-ObservableObject {
+final class RuleListViewModel: ObservableObject {
 
     @Published var rules: [Rule] = []
     @Published var isLoading = false

@@ -8,7 +8,8 @@
 import Foundation
 import Combine
 
-@MainActor // Swift guarantees that all methods and property mutations inside the ViewModel execute on the Main Actor (main thread).
+// Swift guarantees that all methods and property mutations inside the ViewModel execute on the Main Actor (main thread).
+@MainActor
 final class FBAuthViewModel: ObservableObject {
 
     @Published var email = ""

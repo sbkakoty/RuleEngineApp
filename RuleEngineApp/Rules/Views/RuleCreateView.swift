@@ -9,12 +9,9 @@ import SwiftUI
 
 struct RuleCreateView: View {
 
-    @Environment(\.dismiss)
-    private var dismiss
+    @Environment(\.dismiss) private var dismiss
 
-    @StateObject
-    var viewModel:
-        RuleEditorViewModel
+    @StateObject var viewModel: RuleEditorViewModel
 
     var body: some View {
 
@@ -74,8 +71,7 @@ struct RuleCreateView: View {
                 TextField(
                     "Action Message",
                     text:
-                        $viewModel
-                            .actionMessage
+                        $viewModel.actionMessage
                 )
                 .accessibilityIdentifier("txtAction")
             }
@@ -84,8 +80,7 @@ struct RuleCreateView: View {
 
                 Task {
 
-                    await viewModel
-                        .saveRule()
+                    await viewModel.saveRule()
 
                     dismiss()
                 }
