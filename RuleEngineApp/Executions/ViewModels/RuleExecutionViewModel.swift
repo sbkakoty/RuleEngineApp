@@ -39,6 +39,11 @@ final class RuleExecutionViewModel: ObservableObject {
 
         errorMessage = ""
         
+        guard !jsonPayload.isEmpty else {
+            errorMessage = "Event Payload is required"
+            return
+        }
+        
         isLoading = true
 
         defer {

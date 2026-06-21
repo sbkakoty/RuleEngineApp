@@ -41,7 +41,7 @@
 		167B4B2D2FE2ABB900C5FC21 /* RuleEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B2C2FE2ABB900C5FC21 /* RuleEditorViewModel.swift */; };
 		167B4B2F2FE2ACDA00C5FC21 /* RuleDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B2E2FE2ACDA00C5FC21 /* RuleDisplayView.swift */; };
 		167B4B312FE2AD0800C5FC21 /* RuleCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B302FE2AD0800C5FC21 /* RuleCreateView.swift */; };
-		16C4E12F2FE82EB1003B8157 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16C4E12E2FE82EB1003B8157 /* GoogleService-Info.plist */; };
+		16C4E1312FE83E75003B8157 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16C4E1302FE83E75003B8157 /* GoogleService-Info.plist */; };
 		16F77D0E2FE5741A002F85A3 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F77D052FE5741A002F85A3 /* AuthViewModelTests.swift */; };
 		16F77D0F2FE5741A002F85A3 /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F77D062FE5741A002F85A3 /* MockAuthService.swift */; };
 		16F77D102FE5741A002F85A3 /* MockRuleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F77D082FE5741A002F85A3 /* MockRuleRepository.swift */; };
@@ -104,7 +104,7 @@
 		167B4B2C2FE2ABB900C5FC21 /* RuleEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEditorViewModel.swift; sourceTree = "<group>"; };
 		167B4B2E2FE2ACDA00C5FC21 /* RuleDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleDisplayView.swift; sourceTree = "<group>"; };
 		167B4B302FE2AD0800C5FC21 /* RuleCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleCreateView.swift; sourceTree = "<group>"; };
-		16C4E12E2FE82EB1003B8157 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		16C4E1302FE83E75003B8157 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		16F77D052FE5741A002F85A3 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
 		16F77D062FE5741A002F85A3 /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
 		16F77D082FE5741A002F85A3 /* MockRuleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRuleRepository.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 		167B4A8D2FE18C9900C5FC21 = {
 			isa = PBXGroup;
 			children = (
-				16C4E12E2FE82EB1003B8157 /* GoogleService-Info.plist */,
+				16C4E1302FE83E75003B8157 /* GoogleService-Info.plist */,
 				167B4ADD2FE296FC00C5FC21 /* RuleEngineApp */,
 				16F77D0D2FE5741A002F85A3 /* RuleEngineAppTests */,
 				16F77D142FE5741F002F85A3 /* RuleEngineAppUITests */,
@@ -532,7 +532,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16C4E12F2FE82EB1003B8157 /* GoogleService-Info.plist in Resources */,
+				16C4E1312FE83E75003B8157 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
