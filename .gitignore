@@ -1,0 +1,24 @@
+# --- Apple/Mac OS Hidden Files ---
+.DS_Store
+
+# --- Firebase / Private Configurations ---
+# Explicitly ignores your private GoogleService file anywhere in the project
+GoogleService-Info.plist
+
+# --- Package Dependencies ---
+# CocoaPods
+Pods/
+*.xcworkspace/
+
+# Swift Package Manager (SPM)
+.build/
+Packages/
+GeneratedPackages/
+
+# Carthage
+Carthage/Build/
+
+# --- Xcode User Data ---
+xcuserdata/
+DerivedData/
+*.moved-aside
