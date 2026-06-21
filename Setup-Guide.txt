@@ -1,0 +1,37 @@
+Firebase Setup
+Create Firebase Project
+1 Go to Firebase Console.
+2 Click "Create Project".
+3 Enter project name: RuleEngineApp
+4 Disable Google Analytics if not required.
+5 Create the project.
+Register iOS App
+1 Click "Add App".
+2 Select iOS.
+3 Enter Bundle Identifier: com.company.RuleEngineApp
+4 Download: GoogleService-Info.plist
+5 Add the file to the Xcode project.
+Enable Authentication
+1 Navigate to Authentication.
+2 Click Get Started.
+3 Enable Email/Password Sign-In.
+Enable Firestore
+1 Navigate to Firestore Database.
+2 Create Database.
+3 Start in Development Mode.
+4 Select the nearest region.
+Add Firebase SDK
+In Xcode:
+File ? Add Package Dependencies
+Add: https://github.com/firebase/firebase-ios-sdk
+Required packages:
+? FirebaseAuth
+? FirebaseFirestore
+? FirebaseCore
+? 
+Run Locally
+1 Add GoogleService-Info.plist.
+2 Resolve Swift packages.
+3 Build the project.
+4 Launch on simulator or device.
+

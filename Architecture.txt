@@ -1,0 +1,45 @@
+Architectural Pattern
+The application follows MVVM.
+Layers
+UI Layer
+* SwiftUI Views
+* ViewModels
+* Navigation
+Domain Layer
+* Use Cases
+* Business Rules
+* Validation Logic
+* Repository Protocol
+Data Layer
+* Firebase Services
+* Local Storage
+* Models
+
+Dependency Injection
+Dependencies are injected through initializers.
+Example:
+RuleListViewModel(
+    repository: RuleServiceProtocol
+)
+
+
+
+
+
+Sample Test Data / Payloads
+* Expense approval
+{
+              "amount": 7000
+}
+* Order Delay Escalation
+{
+              "delayDays": 6
+ }
+* Assign Priority Support
+{
+  	"Tier": "Premium"
+}
+
+
+
+

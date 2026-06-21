@@ -1,0 +1,977 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		166F40022FE2BA5A0046FF9A /* RuleExecutionHistoryServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F40012FE2BA5A0046FF9A /* RuleExecutionHistoryServiceProtocol.swift */; };
+		166F40042FE2BAAC0046FF9A /* RuleExecutionHistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F40032FE2BAAC0046FF9A /* RuleExecutionHistoryService.swift */; };
+		166F40062FE2BB800046FF9A /* RuleExecutionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F40052FE2BB800046FF9A /* RuleExecutionViewModel.swift */; };
+		166F40082FE2BBAE0046FF9A /* ExecutionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F40072FE2BBAE0046FF9A /* ExecutionResult.swift */; };
+		166F400A2FE2BBF80046FF9A /* RuleExecutionHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F40092FE2BBF80046FF9A /* RuleExecutionHistoryViewModel.swift */; };
+		166F400C2FE2BC1B0046FF9A /* RuleExecutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F400B2FE2BC1B0046FF9A /* RuleExecutionView.swift */; };
+		166F400E2FE2BDA40046FF9A /* RuleExecutionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F400D2FE2BDA40046FF9A /* RuleExecutionHistoryView.swift */; };
+		166F40102FE2BFCF0046FF9A /* RuleExecutionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F400F2FE2BFCF0046FF9A /* RuleExecutionServiceProtocol.swift */; };
+		166F40122FE2BFEA0046FF9A /* RuleExecutionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F40112FE2BFEA0046FF9A /* RuleExecutionService.swift */; };
+		166F402E2FE2EBE30046FF9A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166F402D2FE2EBE30046FF9A /* SettingsView.swift */; };
+		167B4AC42FE1927D00C5FC21 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 167B4AC32FE1927D00C5FC21 /* FirebaseAuth */; };
+		167B4AC62FE1927D00C5FC21 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 167B4AC52FE1927D00C5FC21 /* FirebaseFirestore */; };
+		167B4ADF2FE2970F00C5FC21 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4ADE2FE2970F00C5FC21 /* RootView.swift */; };
+		167B4AE32FE2973E00C5FC21 /* RuleEngineAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4AE22FE2973E00C5FC21 /* RuleEngineAppApp.swift */; };
+		167B4AE62FE2984000C5FC21 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4AE52FE2984000C5FC21 /* FirebaseManager.swift */; };
+		167B4AE82FE2986700C5FC21 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4AE72FE2986700C5FC21 /* DependencyContainer.swift */; };
+		167B4AEE2FE2992800C5FC21 /* FBAuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4AED2FE2992800C5FC21 /* FBAuthServiceProtocol.swift */; };
+		167B4AF02FE2994400C5FC21 /* FBAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4AEF2FE2994400C5FC21 /* FBAuthService.swift */; };
+		167B4AF52FE29A1000C5FC21 /* RuleConditionOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4AF42FE29A1000C5FC21 /* RuleConditionOperator.swift */; };
+		167B4AF72FE29A2B00C5FC21 /* RuleCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4AF62FE29A2B00C5FC21 /* RuleCondition.swift */; };
+		167B4AF92FE29A4900C5FC21 /* RuleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4AF82FE29A4900C5FC21 /* RuleAction.swift */; };
+		167B4AFB2FE29A6300C5FC21 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4AFA2FE29A6300C5FC21 /* Rule.swift */; };
+		167B4AFD2FE29A8300C5FC21 /* Execution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4AFC2FE29A8300C5FC21 /* Execution.swift */; };
+		167B4AFF2FE29ACE00C5FC21 /* FBAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4AFE2FE29ACE00C5FC21 /* FBAuthViewModel.swift */; };
+		167B4B152FE2A02A00C5FC21 /* FBSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B142FE2A02A00C5FC21 /* FBSessionViewModel.swift */; };
+		167B4B172FE2A0B100C5FC21 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B162FE2A0B100C5FC21 /* SigninView.swift */; };
+		167B4B192FE2A0D000C5FC21 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B182FE2A0D000C5FC21 /* RegisterView.swift */; };
+		167B4B1B2FE2A21E00C5FC21 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B1A2FE2A21E00C5FC21 /* MainTabView.swift */; };
+		167B4B1F2FE2A76E00C5FC21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 167B4B1E2FE2A76E00C5FC21 /* GoogleService-Info.plist */; };
+		167B4B272FE2AB3200C5FC21 /* RuleServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B262FE2AB3200C5FC21 /* RuleServiceProtocol.swift */; };
+		167B4B292FE2AB6800C5FC21 /* RuleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B282FE2AB6800C5FC21 /* RuleService.swift */; };
+		167B4B2B2FE2AB9200C5FC21 /* RuleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B2A2FE2AB9200C5FC21 /* RuleListViewModel.swift */; };
+		167B4B2D2FE2ABB900C5FC21 /* RuleEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B2C2FE2ABB900C5FC21 /* RuleEditorViewModel.swift */; };
+		167B4B2F2FE2ACDA00C5FC21 /* RuleDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B2E2FE2ACDA00C5FC21 /* RuleDisplayView.swift */; };
+		167B4B312FE2AD0800C5FC21 /* RuleCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167B4B302FE2AD0800C5FC21 /* RuleCreateView.swift */; };
+		16F77D0E2FE5741A002F85A3 /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F77D052FE5741A002F85A3 /* AuthViewModelTests.swift */; };
+		16F77D0F2FE5741A002F85A3 /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F77D062FE5741A002F85A3 /* MockAuthService.swift */; };
+		16F77D102FE5741A002F85A3 /* MockRuleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F77D082FE5741A002F85A3 /* MockRuleRepository.swift */; };
+		16F77D112FE5741A002F85A3 /* RuleEditorViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F77D092FE5741A002F85A3 /* RuleEditorViewModelTests.swift */; };
+		16F77D122FE5741A002F85A3 /* RuleEngineViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F77D0A2FE5741A002F85A3 /* RuleEngineViewModelTests.swift */; };
+		16F77D132FE5741A002F85A3 /* RuleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F77D0B2FE5741A002F85A3 /* RuleListViewModelTests.swift */; };
+		16F77D162FE5A9DF002F85A3 /* RuleEngineAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F77D152FE5A9DF002F85A3 /* RuleEngineAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		167B4AA62FE18C9B00C5FC21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 167B4A8E2FE18C9900C5FC21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 167B4A952FE18C9900C5FC21;
+			remoteInfo = RuleEngineApp;
+		};
+		167B4AB02FE18C9B00C5FC21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 167B4A8E2FE18C9900C5FC21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 167B4A952FE18C9900C5FC21;
+			remoteInfo = RuleEngineApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		166F40012FE2BA5A0046FF9A /* RuleExecutionHistoryServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleExecutionHistoryServiceProtocol.swift; sourceTree = "<group>"; };
+		166F40032FE2BAAC0046FF9A /* RuleExecutionHistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleExecutionHistoryService.swift; sourceTree = "<group>"; };
+		166F40052FE2BB800046FF9A /* RuleExecutionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleExecutionViewModel.swift; sourceTree = "<group>"; };
+		166F40072FE2BBAE0046FF9A /* ExecutionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionResult.swift; sourceTree = "<group>"; };
+		166F40092FE2BBF80046FF9A /* RuleExecutionHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleExecutionHistoryViewModel.swift; sourceTree = "<group>"; };
+		166F400B2FE2BC1B0046FF9A /* RuleExecutionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleExecutionView.swift; sourceTree = "<group>"; };
+		166F400D2FE2BDA40046FF9A /* RuleExecutionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleExecutionHistoryView.swift; sourceTree = "<group>"; };
+		166F400F2FE2BFCF0046FF9A /* RuleExecutionServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleExecutionServiceProtocol.swift; sourceTree = "<group>"; };
+		166F40112FE2BFEA0046FF9A /* RuleExecutionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleExecutionService.swift; sourceTree = "<group>"; };
+		166F402D2FE2EBE30046FF9A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		167B4A962FE18C9900C5FC21 /* RuleEngineApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuleEngineApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		167B4AA52FE18C9B00C5FC21 /* RuleEngineAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuleEngineAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		167B4AAF2FE18C9B00C5FC21 /* RuleEngineAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuleEngineAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		167B4ADE2FE2970F00C5FC21 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		167B4AE22FE2973E00C5FC21 /* RuleEngineAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEngineAppApp.swift; sourceTree = "<group>"; };
+		167B4AE52FE2984000C5FC21 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		167B4AE72FE2986700C5FC21 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		167B4AED2FE2992800C5FC21 /* FBAuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAuthServiceProtocol.swift; sourceTree = "<group>"; };
+		167B4AEF2FE2994400C5FC21 /* FBAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAuthService.swift; sourceTree = "<group>"; };
+		167B4AF42FE29A1000C5FC21 /* RuleConditionOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleConditionOperator.swift; sourceTree = "<group>"; };
+		167B4AF62FE29A2B00C5FC21 /* RuleCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleCondition.swift; sourceTree = "<group>"; };
+		167B4AF82FE29A4900C5FC21 /* RuleAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleAction.swift; sourceTree = "<group>"; };
+		167B4AFA2FE29A6300C5FC21 /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		167B4AFC2FE29A8300C5FC21 /* Execution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Execution.swift; sourceTree = "<group>"; };
+		167B4AFE2FE29ACE00C5FC21 /* FBAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAuthViewModel.swift; sourceTree = "<group>"; };
+		167B4B142FE2A02A00C5FC21 /* FBSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBSessionViewModel.swift; sourceTree = "<group>"; };
+		167B4B162FE2A0B100C5FC21 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
+		167B4B182FE2A0D000C5FC21 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		167B4B1A2FE2A21E00C5FC21 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		167B4B1E2FE2A76E00C5FC21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		167B4B262FE2AB3200C5FC21 /* RuleServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleServiceProtocol.swift; sourceTree = "<group>"; };
+		167B4B282FE2AB6800C5FC21 /* RuleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleService.swift; sourceTree = "<group>"; };
+		167B4B2A2FE2AB9200C5FC21 /* RuleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleListViewModel.swift; sourceTree = "<group>"; };
+		167B4B2C2FE2ABB900C5FC21 /* RuleEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEditorViewModel.swift; sourceTree = "<group>"; };
+		167B4B2E2FE2ACDA00C5FC21 /* RuleDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleDisplayView.swift; sourceTree = "<group>"; };
+		167B4B302FE2AD0800C5FC21 /* RuleCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleCreateView.swift; sourceTree = "<group>"; };
+		16F77D052FE5741A002F85A3 /* AuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
+		16F77D062FE5741A002F85A3 /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
+		16F77D082FE5741A002F85A3 /* MockRuleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRuleRepository.swift; sourceTree = "<group>"; };
+		16F77D092FE5741A002F85A3 /* RuleEditorViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEditorViewModelTests.swift; sourceTree = "<group>"; };
+		16F77D0A2FE5741A002F85A3 /* RuleEngineViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEngineViewModelTests.swift; sourceTree = "<group>"; };
+		16F77D0B2FE5741A002F85A3 /* RuleListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleListViewModelTests.swift; sourceTree = "<group>"; };
+		16F77D152FE5A9DF002F85A3 /* RuleEngineAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEngineAppUITests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		167B4A932FE18C9900C5FC21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167B4AC42FE1927D00C5FC21 /* FirebaseAuth in Frameworks */,
+				167B4AC62FE1927D00C5FC21 /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		167B4AA22FE18C9B00C5FC21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		167B4AAC2FE18C9B00C5FC21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		166F3FFE2FE2B9A20046FF9A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				166F40112FE2BFEA0046FF9A /* RuleExecutionService.swift */,
+				166F400F2FE2BFCF0046FF9A /* RuleExecutionServiceProtocol.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		166F3FFF2FE2BA060046FF9A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				166F40052FE2BB800046FF9A /* RuleExecutionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		166F40002FE2BA0F0046FF9A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				166F400B2FE2BC1B0046FF9A /* RuleExecutionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		166F40272FE2EB7B0046FF9A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				166F402A2FE2EBAA0046FF9A /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		166F402A2FE2EBAA0046FF9A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				166F402D2FE2EBE30046FF9A /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		166F403D2FE3A0070046FF9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		167B4A8D2FE18C9900C5FC21 = {
+			isa = PBXGroup;
+			children = (
+				167B4ADD2FE296FC00C5FC21 /* RuleEngineApp */,
+				16F77D0D2FE5741A002F85A3 /* RuleEngineAppTests */,
+				16F77D142FE5741F002F85A3 /* RuleEngineAppUITests */,
+				167B4B1E2FE2A76E00C5FC21 /* GoogleService-Info.plist */,
+				166F403D2FE3A0070046FF9A /* Frameworks */,
+				167B4A972FE18C9900C5FC21 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		167B4A972FE18C9900C5FC21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				167B4A962FE18C9900C5FC21 /* RuleEngineApp.app */,
+				167B4AA52FE18C9B00C5FC21 /* RuleEngineAppTests.xctest */,
+				167B4AAF2FE18C9B00C5FC21 /* RuleEngineAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		167B4ADD2FE296FC00C5FC21 /* RuleEngineApp */ = {
+			isa = PBXGroup;
+			children = (
+				16F77D1F2FE6F23C002F85A3 /* Root */,
+				167B4AE42FE297FA00C5FC21 /* CoreService */,
+				167B4AE92FE298C500C5FC21 /* Models */,
+				167B4AEA2FE298CD00C5FC21 /* Authentication */,
+				167B4AEB2FE298EF00C5FC21 /* Rules */,
+				167B4AEC2FE298F800C5FC21 /* Executions */,
+				16F77D1B2FE6F199002F85A3 /* History */,
+				166F40272FE2EB7B0046FF9A /* Settings */,
+			);
+			path = RuleEngineApp;
+			sourceTree = "<group>";
+		};
+		167B4AE42FE297FA00C5FC21 /* CoreService */ = {
+			isa = PBXGroup;
+			children = (
+				167B4AE52FE2984000C5FC21 /* FirebaseManager.swift */,
+				167B4AE72FE2986700C5FC21 /* DependencyContainer.swift */,
+			);
+			path = CoreService;
+			sourceTree = "<group>";
+		};
+		167B4AE92FE298C500C5FC21 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				167B4AF42FE29A1000C5FC21 /* RuleConditionOperator.swift */,
+				167B4AF62FE29A2B00C5FC21 /* RuleCondition.swift */,
+				167B4AF82FE29A4900C5FC21 /* RuleAction.swift */,
+				167B4AFA2FE29A6300C5FC21 /* Rule.swift */,
+				167B4AFC2FE29A8300C5FC21 /* Execution.swift */,
+				166F40072FE2BBAE0046FF9A /* ExecutionResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		167B4AEA2FE298CD00C5FC21 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				167B4AF22FE299A100C5FC21 /* Views */,
+				167B4AF32FE299A900C5FC21 /* ViewModels */,
+				167B4AF12FE2996D00C5FC21 /* Services */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		167B4AEB2FE298EF00C5FC21 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				167B4B232FE2AAE300C5FC21 /* Views */,
+				167B4B242FE2AAF000C5FC21 /* ViewModels */,
+				167B4B252FE2AB0200C5FC21 /* Services */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+		167B4AEC2FE298F800C5FC21 /* Executions */ = {
+			isa = PBXGroup;
+			children = (
+				166F40002FE2BA0F0046FF9A /* Views */,
+				166F3FFF2FE2BA060046FF9A /* ViewModels */,
+				166F3FFE2FE2B9A20046FF9A /* Services */,
+			);
+			path = Executions;
+			sourceTree = "<group>";
+		};
+		167B4AF12FE2996D00C5FC21 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				167B4AED2FE2992800C5FC21 /* FBAuthServiceProtocol.swift */,
+				167B4AEF2FE2994400C5FC21 /* FBAuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		167B4AF22FE299A100C5FC21 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				167B4B162FE2A0B100C5FC21 /* SigninView.swift */,
+				167B4B182FE2A0D000C5FC21 /* RegisterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		167B4AF32FE299A900C5FC21 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				167B4AFE2FE29ACE00C5FC21 /* FBAuthViewModel.swift */,
+				167B4B142FE2A02A00C5FC21 /* FBSessionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		167B4B232FE2AAE300C5FC21 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				167B4B2E2FE2ACDA00C5FC21 /* RuleDisplayView.swift */,
+				167B4B302FE2AD0800C5FC21 /* RuleCreateView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		167B4B242FE2AAF000C5FC21 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				167B4B2A2FE2AB9200C5FC21 /* RuleListViewModel.swift */,
+				167B4B2C2FE2ABB900C5FC21 /* RuleEditorViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		167B4B252FE2AB0200C5FC21 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				167B4B262FE2AB3200C5FC21 /* RuleServiceProtocol.swift */,
+				167B4B282FE2AB6800C5FC21 /* RuleService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		16F77D072FE5741A002F85A3 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				16F77D052FE5741A002F85A3 /* AuthViewModelTests.swift */,
+				16F77D062FE5741A002F85A3 /* MockAuthService.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		16F77D0C2FE5741A002F85A3 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				16F77D082FE5741A002F85A3 /* MockRuleRepository.swift */,
+				16F77D092FE5741A002F85A3 /* RuleEditorViewModelTests.swift */,
+				16F77D0A2FE5741A002F85A3 /* RuleEngineViewModelTests.swift */,
+				16F77D0B2FE5741A002F85A3 /* RuleListViewModelTests.swift */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+		16F77D0D2FE5741A002F85A3 /* RuleEngineAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				16F77D072FE5741A002F85A3 /* Authentication */,
+				16F77D0C2FE5741A002F85A3 /* Rules */,
+			);
+			path = RuleEngineAppTests;
+			sourceTree = "<group>";
+		};
+		16F77D142FE5741F002F85A3 /* RuleEngineAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				16F77D152FE5A9DF002F85A3 /* RuleEngineAppUITests.swift */,
+			);
+			path = RuleEngineAppUITests;
+			sourceTree = "<group>";
+		};
+		16F77D1B2FE6F199002F85A3 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				16F77D1E2FE6F1D8002F85A3 /* Views */,
+				16F77D1D2FE6F1C8002F85A3 /* ViewModels */,
+				16F77D1C2FE6F1BD002F85A3 /* Services */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		16F77D1C2FE6F1BD002F85A3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				166F40032FE2BAAC0046FF9A /* RuleExecutionHistoryService.swift */,
+				166F40012FE2BA5A0046FF9A /* RuleExecutionHistoryServiceProtocol.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		16F77D1D2FE6F1C8002F85A3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				166F40092FE2BBF80046FF9A /* RuleExecutionHistoryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		16F77D1E2FE6F1D8002F85A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				166F400D2FE2BDA40046FF9A /* RuleExecutionHistoryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		16F77D1F2FE6F23C002F85A3 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				167B4B1A2FE2A21E00C5FC21 /* MainTabView.swift */,
+				167B4ADE2FE2970F00C5FC21 /* RootView.swift */,
+				167B4AE22FE2973E00C5FC21 /* RuleEngineAppApp.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		167B4A952FE18C9900C5FC21 /* RuleEngineApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 167B4AB92FE18C9B00C5FC21 /* Build configuration list for PBXNativeTarget "RuleEngineApp" */;
+			buildPhases = (
+				167B4A922FE18C9900C5FC21 /* Sources */,
+				167B4A932FE18C9900C5FC21 /* Frameworks */,
+				167B4A942FE18C9900C5FC21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RuleEngineApp;
+			packageProductDependencies = (
+				167B4AC32FE1927D00C5FC21 /* FirebaseAuth */,
+				167B4AC52FE1927D00C5FC21 /* FirebaseFirestore */,
+			);
+			productName = RuleEngineApp;
+			productReference = 167B4A962FE18C9900C5FC21 /* RuleEngineApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		167B4AA42FE18C9B00C5FC21 /* RuleEngineAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 167B4ABC2FE18C9B00C5FC21 /* Build configuration list for PBXNativeTarget "RuleEngineAppTests" */;
+			buildPhases = (
+				167B4AA12FE18C9B00C5FC21 /* Sources */,
+				167B4AA22FE18C9B00C5FC21 /* Frameworks */,
+				167B4AA32FE18C9B00C5FC21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				167B4AA72FE18C9B00C5FC21 /* PBXTargetDependency */,
+			);
+			name = RuleEngineAppTests;
+			packageProductDependencies = (
+			);
+			productName = RuleEngineAppTests;
+			productReference = 167B4AA52FE18C9B00C5FC21 /* RuleEngineAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		167B4AAE2FE18C9B00C5FC21 /* RuleEngineAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 167B4ABF2FE18C9B00C5FC21 /* Build configuration list for PBXNativeTarget "RuleEngineAppUITests" */;
+			buildPhases = (
+				167B4AAB2FE18C9B00C5FC21 /* Sources */,
+				167B4AAC2FE18C9B00C5FC21 /* Frameworks */,
+				167B4AAD2FE18C9B00C5FC21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				167B4AB12FE18C9B00C5FC21 /* PBXTargetDependency */,
+			);
+			name = RuleEngineAppUITests;
+			packageProductDependencies = (
+			);
+			productName = RuleEngineAppUITests;
+			productReference = 167B4AAF2FE18C9B00C5FC21 /* RuleEngineAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		167B4A8E2FE18C9900C5FC21 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2650;
+				LastUpgradeCheck = 2650;
+				TargetAttributes = {
+					167B4A952FE18C9900C5FC21 = {
+						CreatedOnToolsVersion = 26.5;
+						LastSwiftMigration = 2650;
+					};
+					167B4AA42FE18C9B00C5FC21 = {
+						CreatedOnToolsVersion = 26.5;
+						TestTargetID = 167B4A952FE18C9900C5FC21;
+					};
+					167B4AAE2FE18C9B00C5FC21 = {
+						CreatedOnToolsVersion = 26.5;
+						LastSwiftMigration = 2650;
+						TestTargetID = 167B4A952FE18C9900C5FC21;
+					};
+				};
+			};
+			buildConfigurationList = 167B4A912FE18C9900C5FC21 /* Build configuration list for PBXProject "RuleEngineApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 167B4A8D2FE18C9900C5FC21;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				167B4AC22FE1927D00C5FC21 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 167B4A972FE18C9900C5FC21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				167B4A952FE18C9900C5FC21 /* RuleEngineApp */,
+				167B4AA42FE18C9B00C5FC21 /* RuleEngineAppTests */,
+				167B4AAE2FE18C9B00C5FC21 /* RuleEngineAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		167B4A942FE18C9900C5FC21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167B4B1F2FE2A76E00C5FC21 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		167B4AA32FE18C9B00C5FC21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		167B4AAD2FE18C9B00C5FC21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		167B4A922FE18C9900C5FC21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				166F40062FE2BB800046FF9A /* RuleExecutionViewModel.swift in Sources */,
+				166F40042FE2BAAC0046FF9A /* RuleExecutionHistoryService.swift in Sources */,
+				167B4B2B2FE2AB9200C5FC21 /* RuleListViewModel.swift in Sources */,
+				166F40082FE2BBAE0046FF9A /* ExecutionResult.swift in Sources */,
+				166F400A2FE2BBF80046FF9A /* RuleExecutionHistoryViewModel.swift in Sources */,
+				167B4AE62FE2984000C5FC21 /* FirebaseManager.swift in Sources */,
+				167B4AEE2FE2992800C5FC21 /* FBAuthServiceProtocol.swift in Sources */,
+				167B4AE82FE2986700C5FC21 /* DependencyContainer.swift in Sources */,
+				167B4B172FE2A0B100C5FC21 /* SigninView.swift in Sources */,
+				167B4B272FE2AB3200C5FC21 /* RuleServiceProtocol.swift in Sources */,
+				167B4AFB2FE29A6300C5FC21 /* Rule.swift in Sources */,
+				167B4B2F2FE2ACDA00C5FC21 /* RuleDisplayView.swift in Sources */,
+				167B4AF92FE29A4900C5FC21 /* RuleAction.swift in Sources */,
+				166F400C2FE2BC1B0046FF9A /* RuleExecutionView.swift in Sources */,
+				166F400E2FE2BDA40046FF9A /* RuleExecutionHistoryView.swift in Sources */,
+				167B4AFD2FE29A8300C5FC21 /* Execution.swift in Sources */,
+				167B4AE32FE2973E00C5FC21 /* RuleEngineAppApp.swift in Sources */,
+				167B4B1B2FE2A21E00C5FC21 /* MainTabView.swift in Sources */,
+				167B4B2D2FE2ABB900C5FC21 /* RuleEditorViewModel.swift in Sources */,
+				167B4B312FE2AD0800C5FC21 /* RuleCreateView.swift in Sources */,
+				166F402E2FE2EBE30046FF9A /* SettingsView.swift in Sources */,
+				167B4AF52FE29A1000C5FC21 /* RuleConditionOperator.swift in Sources */,
+				167B4ADF2FE2970F00C5FC21 /* RootView.swift in Sources */,
+				167B4AF02FE2994400C5FC21 /* FBAuthService.swift in Sources */,
+				166F40102FE2BFCF0046FF9A /* RuleExecutionServiceProtocol.swift in Sources */,
+				167B4B152FE2A02A00C5FC21 /* FBSessionViewModel.swift in Sources */,
+				167B4B192FE2A0D000C5FC21 /* RegisterView.swift in Sources */,
+				166F40022FE2BA5A0046FF9A /* RuleExecutionHistoryServiceProtocol.swift in Sources */,
+				167B4AFF2FE29ACE00C5FC21 /* FBAuthViewModel.swift in Sources */,
+				166F40122FE2BFEA0046FF9A /* RuleExecutionService.swift in Sources */,
+				167B4AF72FE29A2B00C5FC21 /* RuleCondition.swift in Sources */,
+				167B4B292FE2AB6800C5FC21 /* RuleService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		167B4AA12FE18C9B00C5FC21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F77D0E2FE5741A002F85A3 /* AuthViewModelTests.swift in Sources */,
+				16F77D0F2FE5741A002F85A3 /* MockAuthService.swift in Sources */,
+				16F77D102FE5741A002F85A3 /* MockRuleRepository.swift in Sources */,
+				16F77D112FE5741A002F85A3 /* RuleEditorViewModelTests.swift in Sources */,
+				16F77D122FE5741A002F85A3 /* RuleEngineViewModelTests.swift in Sources */,
+				16F77D132FE5741A002F85A3 /* RuleListViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		167B4AAB2FE18C9B00C5FC21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F77D162FE5A9DF002F85A3 /* RuleEngineAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		167B4AA72FE18C9B00C5FC21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 167B4A952FE18C9900C5FC21 /* RuleEngineApp */;
+			targetProxy = 167B4AA62FE18C9B00C5FC21 /* PBXContainerItemProxy */;
+		};
+		167B4AB12FE18C9B00C5FC21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 167B4A952FE18C9900C5FC21 /* RuleEngineApp */;
+			targetProxy = 167B4AB02FE18C9B00C5FC21 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		167B4AB72FE18C9B00C5FC21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DK55D35UB7;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		167B4AB82FE18C9B00C5FC21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = DK55D35UB7;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		167B4ABA2FE18C9B00C5FC21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DK55D35UB7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rule Engine App";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.RuleEngineApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		167B4ABB2FE18C9B00C5FC21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DK55D35UB7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rule Engine App";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.RuleEngineApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		167B4ABD2FE18C9B00C5FC21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DK55D35UB7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.RuleEngineAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RuleEngineApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RuleEngineApp";
+			};
+			name = Debug;
+		};
+		167B4ABE2FE18C9B00C5FC21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DK55D35UB7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.RuleEngineAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RuleEngineApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RuleEngineApp";
+			};
+			name = Release;
+		};
+		167B4AC02FE18C9B00C5FC21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DK55D35UB7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.RuleEngineAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RuleEngineApp;
+			};
+			name = Debug;
+		};
+		167B4AC12FE18C9B00C5FC21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DK55D35UB7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.RuleEngineAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RuleEngineApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		167B4A912FE18C9900C5FC21 /* Build configuration list for PBXProject "RuleEngineApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				167B4AB72FE18C9B00C5FC21 /* Debug */,
+				167B4AB82FE18C9B00C5FC21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		167B4AB92FE18C9B00C5FC21 /* Build configuration list for PBXNativeTarget "RuleEngineApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				167B4ABA2FE18C9B00C5FC21 /* Debug */,
+				167B4ABB2FE18C9B00C5FC21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		167B4ABC2FE18C9B00C5FC21 /* Build configuration list for PBXNativeTarget "RuleEngineAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				167B4ABD2FE18C9B00C5FC21 /* Debug */,
+				167B4ABE2FE18C9B00C5FC21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		167B4ABF2FE18C9B00C5FC21 /* Build configuration list for PBXNativeTarget "RuleEngineAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				167B4AC02FE18C9B00C5FC21 /* Debug */,
+				167B4AC12FE18C9B00C5FC21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		167B4AC22FE1927D00C5FC21 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.14.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		167B4AC32FE1927D00C5FC21 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 167B4AC22FE1927D00C5FC21 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		167B4AC52FE1927D00C5FC21 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 167B4AC22FE1927D00C5FC21 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 167B4A8E2FE18C9900C5FC21 /* Project object */;
+}
