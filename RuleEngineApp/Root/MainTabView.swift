@@ -9,8 +9,7 @@ import SwiftUI
 
 struct MainTabView: View {
 
-    private let container =
-        DependencyContainer()
+    private let container = DependencyContainer()
 
     var body: some View {
 
@@ -18,20 +17,12 @@ struct MainTabView: View {
 
             rulesTab
                 .tabItem {
-                    Label(
-                        "Rules",
-                        systemImage:
-                            "list.bullet.rectangle"
-                    )
+                    Label("Rules", systemImage: "list.bullet.rectangle")
                 }
 
             executeTab
                 .tabItem {
-                    Label(
-                        "Execute",
-                        systemImage:
-                            "play.circle"
-                    )
+                    Label("Execute", systemImage: "play.circle")
                 }
 
             historyTab
