@@ -82,8 +82,6 @@ final class RuleExecutionViewModel: ObservableObject {
 
     private func parsePayload() throws -> [String: Any] {
 
-        print("Payload: \(jsonPayload)")
-
         guard let data = jsonPayload.data(using: .utf8) else {
             throw NSError(domain: "Invalid UTF8", code: -1)
         }
