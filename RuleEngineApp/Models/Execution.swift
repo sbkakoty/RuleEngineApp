@@ -11,14 +11,9 @@ struct Execution: Codable, Identifiable {
 
     @DocumentID
     var id: String?
-
     let eventPayload: [String:String]
-
     let triggeredRules: [String]
-
     let actions: [String]
-
     let executedAt: Date
-
     let success: Bool
 }

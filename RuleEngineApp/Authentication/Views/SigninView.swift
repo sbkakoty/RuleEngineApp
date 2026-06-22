@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SigninView: View {
+    
     @StateObject var viewModel: FBAuthViewModel
 
     var body: some View {

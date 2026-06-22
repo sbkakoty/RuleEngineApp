@@ -32,7 +32,6 @@ final class RuleService: RuleServiceProtocol {
             .getDocuments()
 
         return try snapshot.documents.map {
-
             try $0.data(as: Rule.self)
         }
     }

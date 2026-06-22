@@ -16,31 +16,23 @@ struct RuleDisplayView: View {
     var body: some View {
 
         List {
-
             ForEach(viewModel.rules) { rule in
-
                 NavigationLink {
-
                     RuleCreateView(
                         viewModel:
                             RuleEditorViewModel(
-                                repository:
-                                    container
-                                        .ruleService,
+                                repository: container.ruleService,
                                 rule: rule
                             )
                     )
 
                 } label: {
-
                     VStack(
                         alignment: .leading,
                         spacing: 8
                     ) {
-
                         Text(rule.name)
                             .font(.headline)
-
                         Text(
                             "\(rule.condition.field) \(rule.condition.operation.title) \(rule.condition.value)"
                         )
@@ -57,12 +49,8 @@ struct RuleDisplayView: View {
                                     rule.isActive
                                 },
                                 set: { _ in
-
                                     Task {
-
-                                        await viewModel.toggleRule(
-                                                rule
-                                            )
+                                        await viewModel.toggleRule(rule)
                                     }
                                 }
                             )
@@ -71,12 +59,8 @@ struct RuleDisplayView: View {
                 }
             }
             .onDelete { offsets in
-
                 Task {
-
-                    await viewModel.deleteRule(
-                            at: offsets
-                        )
+                    await viewModel.deleteRule(at: offsets)
                 }
             }
         }
@@ -84,29 +68,22 @@ struct RuleDisplayView: View {
         .accessibilityIdentifier("ruleList")
 
         .toolbar {
-
             NavigationLink {
-
                 RuleCreateView(
                     viewModel:
                         RuleEditorViewModel(
-                            repository:
-                                container
-                                    .ruleService
+                            repository: container.ruleService
                         )
                 )
 
             } label: {
-
                 Image(
-                    systemName:
-                        "plus"
+                    systemName: "plus"
                 )
             }
             .accessibilityIdentifier("navCreateRule")
         }
         .task {
-
             await viewModel.loadRules()
         }
     }

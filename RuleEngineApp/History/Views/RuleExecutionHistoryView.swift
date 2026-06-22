@@ -14,11 +14,8 @@ struct RuleExecutionHistoryView: View {
     var body: some View {
 
         List {
-
             ForEach(viewModel.executions) { execution in
-
                 VStack(alignment: .leading, spacing: 8) {
-
                     Text("Event Submitted")
                         .font(.headline)
 
@@ -53,7 +50,6 @@ struct RuleExecutionHistoryView: View {
             "Execution History"
         )
         .task {
-
             await viewModel
                 .loadExecutions()
         }

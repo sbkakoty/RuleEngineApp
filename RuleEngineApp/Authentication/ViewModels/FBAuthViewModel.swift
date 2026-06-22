@@ -37,14 +37,11 @@ final class FBAuthViewModel: ObservableObject {
         }
 
         guard password.count >= 6 else {
-
             errorMessage =
                 "Password must be at least 6 characters"
-
             return
         }
 
-        
         isLoading = true
 
         defer {
@@ -52,11 +49,8 @@ final class FBAuthViewModel: ObservableObject {
         }
 
         do {
-
             try await authService.login(email: email, password: password)
-
         } catch {
-
             errorMessage = error.localizedDescription
         }
     }
@@ -80,11 +74,8 @@ final class FBAuthViewModel: ObservableObject {
         }
 
         do {
-
             try await authService.register(email: email, password: password)
-
         } catch {
-
             errorMessage = error.localizedDescription
         }
     }
@@ -92,11 +83,8 @@ final class FBAuthViewModel: ObservableObject {
     func logout() async {
 
         do {
-
             try await authService.signOut()
-
         } catch {
-
             print("Logout failed:", error.localizedDescription)
         }
     }

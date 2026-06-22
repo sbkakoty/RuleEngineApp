@@ -32,10 +32,7 @@ final class RuleExecutionHistoryService: RuleExecutionHistoryServiceProtocol {
             .collection("users")
             .document(uid)
             .collection("executions")
-            .order(
-                by: "executedAt",
-                descending: true
-            )
+            .order(by: "executedAt", descending: true)
             .getDocuments()
 
         return try snapshot.documents.map {

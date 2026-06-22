@@ -14,12 +14,10 @@ final class FBAuthService: FBAuthServiceProtocol {
     }
     
     func login(email: String, password: String) async throws {
-
         try await Auth.auth().signIn(withEmail: email, password: password)
     }
 
     func register(email: String, password: String) async throws {
-
         try await Auth.auth().createUser(withEmail: email, password: password)
     }
 

@@ -25,11 +25,9 @@ final class RuleExecutionViewModel: ObservableObject {
 
     private let executionHistoryRepository: RuleExecutionHistoryServiceProtocol
 
-    init(
-        ruleService: RuleServiceProtocol,
+    init(ruleService: RuleServiceProtocol,
         ruleExecution: RuleExecutionServiceProtocol,
-        executionHistoryRepository: RuleExecutionHistoryServiceProtocol
-    ) {
+        executionHistoryRepository: RuleExecutionHistoryServiceProtocol) {
         self.ruleService = ruleService
         self.ruleExecution = ruleExecution
         self.executionHistoryRepository = executionHistoryRepository

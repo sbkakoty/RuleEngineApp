@@ -14,141 +14,96 @@ struct MainTabView: View {
     var body: some View {
 
         TabView {
-
-            rulesTab
+            tabRules
                 .tabItem {
                     Label("Rules", systemImage: "list.bullet.rectangle")
                 }
-
-            executeTab
+            tabExecution
                 .tabItem {
                     Label("Execute", systemImage: "play.circle")
                 }
-
-            historyTab
+            tabHistory
                 .tabItem {
-                    Label(
-                        "History",
-                        systemImage:
-                            "clock.arrow.circlepath"
-                    )
+                    Label("History", systemImage: "clock.arrow.circlepath")
                 }
             
-            settingsTab
+            tabSettings
                 .tabItem {
-                Label(
-                    "Settings",
-                    systemImage: "gear"
-                )
-            }
+                    Label("Settings", systemImage: "gear")
+                }
         }
     }
 
     @ViewBuilder
-    private var rulesTab: some View {
+    private var tabRules: some View {
 
         if #available(iOS 16.0, *) {
-
             NavigationStack {
-
                 RuleDisplayView(
-                    viewModel:
-                        RuleListViewModel(
-                            repository:
-                                container
-                                    .ruleService
-                        )
+                    viewModel: RuleListViewModel(
+                        repository: container.ruleService
+                    )
                 )
             }
-
         } else {
-
             NavigationView {
-
                 RuleDisplayView(
-                    viewModel:
-                        RuleListViewModel(
-                            repository:
-                                container
-                                    .ruleService
-                        )
+                    viewModel: RuleListViewModel(
+                        repository: container.ruleService
+                    )
                 )
             }
         }
     }
 
     @ViewBuilder
-    private var executeTab: some View {
+    private var tabExecution: some View {
 
         if #available(iOS 16.0, *) {
-
             NavigationStack {
-
                 RuleExecutionView(
                     viewModel:
                         RuleExecutionViewModel(
-                            ruleService:
-                                container
-                                    .ruleService,
-                            ruleExecution:
-                                container
-                                    .ruleExecution,
+                            ruleService:container.ruleService,
+                            ruleExecution:container.ruleExecution,
                             executionHistoryRepository:
-                                container
-                                    .executionHistoryRepository
+                                container.executionHistoryRepository
                         )
                 )
             }
-
         } else {
-
             NavigationView {
-
                 RuleExecutionView(
-                    viewModel:
-                        RuleExecutionViewModel(
-                            ruleService:
-                                container
-                                    .ruleService,
-                            ruleExecution:
-                                container
-                                    .ruleExecution,
-                            executionHistoryRepository:
-                                container
-                                    .executionHistoryRepository
-                        )
+                    viewModel: RuleExecutionViewModel(
+                        ruleService: container.ruleService,
+                        ruleExecution: container.ruleExecution,
+                        executionHistoryRepository:
+                            container.executionHistoryRepository
+                    )
                 )
             }
         }
     }
 
     @ViewBuilder
-    private var historyTab: some View {
+    private var tabHistory: some View {
 
         if #available(iOS 16.0, *) {
-
             NavigationStack {
-
+                RuleExecutionHistoryView(
+                    viewModel: RuleExecutionHistoryViewModel(
+                        repository:
+                            container.executionHistoryRepository
+                    )
+                )
+            }
+        } else {
+            NavigationView {
                 RuleExecutionHistoryView(
                     viewModel:
                         RuleExecutionHistoryViewModel(
                             repository:
-                                container
-                                    .executionHistoryRepository
-                        )
-                )
-            }
-
-        } else {
-
-            NavigationView {
-
-                RuleExecutionHistoryView(
-                    viewModel:
-                        RuleExecutionHistoryViewModel(
-                            repository:
-                                container
-                                    .executionHistoryRepository
+                                container.executionHistoryRepository
                         )
                 )
             }
@@ -156,20 +111,19 @@ struct MainTabView: View {
     }
     
     @ViewBuilder
-    private var settingsTab: some View {
+    private var tabSettings: some View {
 
         if #available(iOS 16.0, *) {
-
             NavigationStack {
-
-                SettingsView(viewModel: FBAuthViewModel(authService:container.authService))
+                SettingsView(
+                    viewModel: FBAuthViewModel(authService:container.authService)
+                )
             }
-
         } else {
-
             NavigationView {
-
-                SettingsView(viewModel: FBAuthViewModel(authService: container.authService))
+                SettingsView(
+                    viewModel: FBAuthViewModel(authService: container.authService)
+                )
             }
         }
     }

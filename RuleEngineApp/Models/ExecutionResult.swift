@@ -10,6 +10,5 @@ import Foundation
 struct ExecutionResult {
 
     let triggeredRules: [String]
-
     let actions: [String]
 }

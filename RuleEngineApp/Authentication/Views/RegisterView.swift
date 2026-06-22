@@ -14,13 +14,10 @@ struct RegisterView: View {
     var body: some View {
 
         VStack(spacing: 24) {
-
             Spacer()
-
             Text("Create Account")
                 .font(.title)
                 .bold()
-
             TextField(
                 "Email",
                 text: $viewModel.email
@@ -31,7 +28,6 @@ struct RegisterView: View {
             .padding()
             .background(Color.gray.opacity(0.1))
             .cornerRadius(8)
-
             SecureField(
                 "Password",
                 text: $viewModel.password
@@ -41,31 +37,23 @@ struct RegisterView: View {
             .cornerRadius(8)
 
             if !viewModel.errorMessage.isEmpty {
-
                 Text(viewModel.errorMessage)
                     .foregroundColor(.red)
             }
 
             Button {
-
                 Task {
                     await viewModel.register()
                 }
-
             } label: {
-
                 if viewModel.isLoading {
-
                     ProgressView()
-
                 } else {
-
                     Text("Register")
                         .frame(maxWidth: .infinity)
                 }
             }
             .buttonStyle(.borderedProminent)
-
             Spacer()
         }
         .padding()

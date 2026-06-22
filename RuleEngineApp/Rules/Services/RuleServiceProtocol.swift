@@ -8,12 +8,8 @@
 import Foundation
 
 protocol RuleServiceProtocol {
-
     func fetchRules() async throws -> [Rule]
-
     func createRule(_ rule: Rule) async throws
-
     func updateRule(_ rule: Rule) async throws
-
     func deleteRule(id: String) async throws
 }

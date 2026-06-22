@@ -10,6 +10,6 @@ import Foundation
 protocol RuleExecutionHistoryServiceProtocol {
 
     func saveExecution(_ execution: Execution) async throws
-
+    
     func fetchExecutions() async throws -> [Execution]
 }

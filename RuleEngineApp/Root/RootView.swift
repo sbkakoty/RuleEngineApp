@@ -9,9 +9,8 @@ import SwiftUI
 
 struct RootView: View {
 
-    @StateObject
-    private var sessionVM = FBSessionViewModel()
-
+    @StateObject private var sessionVM = FBSessionViewModel()
+    
     private let container = DependencyContainer()
 
     var body: some View {

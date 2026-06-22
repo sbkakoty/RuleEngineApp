@@ -14,30 +14,24 @@ struct RuleExecutionView: View {
     var body: some View {
 
         ScrollView {
-
             VStack(
                 alignment: .leading,
                 spacing: 16
             ) {
-
                 Text("Event Payload")
                     .font(.headline)
 
                 TextEditor(
                     text:
-                        $viewModel
-                        .jsonPayload
+                        $viewModel.jsonPayload
                 )
                 .frame(height: 150)
                 .border(.gray)
                 .accessibilityIdentifier("textEditorPayload")
 
                 Button {
-
                     Task {
-
-                        await viewModel
-                            .executeEvent()
+                        await viewModel.executeEvent()
                     }
 
                 } label: {
@@ -53,8 +47,7 @@ struct RuleExecutionView: View {
                 .accessibilityIdentifier("btnExecute")
                 
 
-                if let result =
-                    viewModel.result {
+                if let result = viewModel.result {
 
                     VStack(
                         alignment:
@@ -67,12 +60,7 @@ struct RuleExecutionView: View {
                         )
                         .font(.headline)
 
-                        ForEach(
-                            result
-                            .triggeredRules,
-                            id: \.self
-                        ) {
-
+                        ForEach(result.triggeredRules, id: \.self) {
                             Text("• \($0)")
                         }
 
@@ -81,23 +69,16 @@ struct RuleExecutionView: View {
                         )
                         .font(.headline)
 
-                        ForEach(
-                            result.actions,
-                            id: \.self
-                        ) {
-
+                        ForEach(result.actions, id: \.self) {
                             Text("• \($0)")
                         }
                     }
                 }
 
-                if !viewModel
-                    .errorMessage
-                    .isEmpty {
+                if !viewModel.errorMessage.isEmpty {
 
                     Text(
-                        viewModel
-                            .errorMessage
+                        viewModel.errorMessage
                     )
                     .foregroundColor(
                         .red

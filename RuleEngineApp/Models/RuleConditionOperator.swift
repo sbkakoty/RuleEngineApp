@@ -26,25 +26,18 @@ enum RuleConditionOperator: String, Codable, CaseIterable, Identifiable {
     var title: String {
 
         switch self {
-
         case .equal:
             return "=="
-
         case .notEqual:
             return "!="
-
         case .greaterThan:
             return ">"
-
         case .lessThan:
             return "<"
-
         case .greaterThanOrEqual:
             return ">="
-
         case .lessThanOrEqual:
             return "<="
-
         case .contains:
             return "contains"
         }

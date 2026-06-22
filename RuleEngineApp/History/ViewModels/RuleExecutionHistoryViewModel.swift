@@ -32,13 +32,8 @@ final class RuleExecutionHistoryViewModel: ObservableObject {
         }
 
         do {
-
-            executions =
-                try await repository
-                .fetchExecutions()
-
+            executions = try await repository.fetchExecutions()
         } catch {
-
             print(error)
         }
     }

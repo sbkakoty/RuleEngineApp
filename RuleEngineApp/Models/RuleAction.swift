@@ -10,6 +10,5 @@ import Foundation
 struct RuleAction: Codable {
 
     let type: String
-
     let message: String
 }

@@ -19,20 +19,16 @@ final class RuleExecutionService: RuleExecutionServiceProtocol {
 
         for rule in activeRules {
 
-            if evaluate(
-                rule: rule,
-                event: event
-            ) {
-
+            if evaluate(rule: rule, event: event) {
                 matchedRules.append(rule)
             }
         }
 
         return ExecutionResult(
-                triggeredRules: matchedRules.map(\.name),
-                actions: matchedRules.map {
-                    $0.action.message
-                }
+            triggeredRules: matchedRules.map(\.name),
+            actions: matchedRules.map {
+                $0.action.message
+            }
         )
     }
 }
@@ -53,38 +49,43 @@ extension RuleExecutionService {
         switch condition.operation {
 
         case .equal:
-
             return "\(eventValue)" == condition.value
 
         case .notEqual:
-
             return "\(eventValue)" != condition.value
 
         case .contains:
-
             return "\(eventValue)".localizedCaseInsensitiveContains(condition.value)
 
-        case .greaterThan:
+        case .greaterThan, .lessThan, .greaterThanOrEqual, .lessThanOrEqual:
 
-            return compareNumbers(lhs: eventValue, rhs: condition.value) > 0
+            guard let result = compareNumbers(lhs: eventValue, rhs: condition.value) else {
+                return false
+            }
 
-        case .lessThan:
+            switch condition.operation {
 
-            return compareNumbers(lhs: eventValue, rhs: condition.value) < 0
+            case .greaterThan:
+                return result > 0
 
-        case .greaterThanOrEqual:
+            case .lessThan:
+                return result < 0
 
-            return compareNumbers(lhs: eventValue, rhs: condition.value) >= 0
+            case .greaterThanOrEqual:
+                return result >= 0
 
-        case .lessThanOrEqual:
+            case .lessThanOrEqual:
+                return result <= 0
 
-            return compareNumbers(lhs: eventValue, rhs: condition.value) <= 0
+            default:
+                return false
+            }
         }
     }
     
-    func compareNumbers(lhs: Any, rhs: String) -> Double {
+    func compareNumbers(lhs: Any, rhs: String) -> Double? {
 
-        guard let left = Double("\(lhs)"), let right = Double(rhs) else { return -999999 }
+        guard let left = Double("\(lhs)"), let right = Double(rhs) else { return nil }
 
         return left - right
     }

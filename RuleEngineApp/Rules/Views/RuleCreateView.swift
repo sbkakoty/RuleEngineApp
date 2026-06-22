@@ -16,20 +16,16 @@ struct RuleCreateView: View {
     var body: some View {
 
         Form {
-
             Section("Rule") {
-
                 TextField(
                     "Rule Name",
-                    text:
-                        $viewModel.name
+                    text: $viewModel.name
                 )
                 .accessibilityIdentifier("txtRuleName")
 
                 Toggle(
                     "Active",
-                    isOn:
-                        $viewModel.isActive
+                    isOn: $viewModel.isActive
                 )
             }
 
@@ -37,20 +33,17 @@ struct RuleCreateView: View {
 
                 TextField(
                     "Field",
-                    text:
-                        $viewModel.field
+                    text: $viewModel.field
                 )
                 .accessibilityIdentifier("txtField")
 
                 Picker(
                     "Operator",
-                    selection:
-                        $viewModel.operation
+                    selection: $viewModel.operation
                 ) {
 
                     ForEach(
-                        RuleConditionOperator
-                            .allCases
+                        RuleConditionOperator.allCases
                     ) {
 
                         Text($0.title)
@@ -67,7 +60,6 @@ struct RuleCreateView: View {
             }
 
             Section("Action") {
-
                 TextField(
                     "Action Message",
                     text:
@@ -77,11 +69,8 @@ struct RuleCreateView: View {
             }
 
             Button("Save") {
-
                 Task {
-
                     await viewModel.saveRule()
-
                     dismiss()
                 }
             }

@@ -25,9 +25,7 @@ final class FBSessionViewModel: ObservableObject {
     }
 
     deinit {
-
         if let listener {
-
             Auth.auth().removeStateDidChangeListener(listener)
         }
     }

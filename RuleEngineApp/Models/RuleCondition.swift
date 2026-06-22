@@ -10,8 +10,6 @@ import Foundation
 struct RuleCondition: Codable {
 
     let field: String
-
     let operation: RuleConditionOperator
-
     let value: String
 }

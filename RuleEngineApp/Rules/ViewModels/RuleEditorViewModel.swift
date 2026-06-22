@@ -13,8 +13,7 @@ final class RuleEditorViewModel: ObservableObject {
 
     @Published var name = ""
     @Published var field = ""
-    @Published var operation:
-    RuleConditionOperator = .equal
+    @Published var operation: RuleConditionOperator = .equal
     @Published var value = ""
     @Published var actionMessage = ""
     @Published var isActive = true
@@ -40,24 +39,30 @@ final class RuleEditorViewModel: ObservableObject {
 
     func saveRule() async {
 
-        let rule = Rule(id: editingRule?.id, name: name, isActive: isActive, condition: RuleCondition(field: field, operation: operation, value: value), action: RuleAction(type: "generic", message: actionMessage),
+        let rule = Rule(
+            id: editingRule?.id,
+            name: name,
+            isActive: isActive,
+            condition:
+                RuleCondition(
+                    field: field,
+                    operation: operation,
+                    value: value
+                ),
+            action:
+                RuleAction(
+                    type: "generic",
+                    message: actionMessage
+                ),
             createdAt: editingRule?.createdAt ?? Date())
 
         do {
-
             if editingRule == nil {
-
-                try await repository
-                    .createRule(rule)
-
+                try await repository.createRule(rule)
             } else {
-
-                try await repository
-                    .updateRule(rule)
+                try await repository.updateRule(rule)
             }
-
         } catch {
-
             print(error)
         }
     }

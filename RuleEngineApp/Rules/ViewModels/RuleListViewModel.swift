@@ -24,11 +24,8 @@ final class RuleListViewModel: ObservableObject {
     func loadRules() async {
 
         do {
-
             rules = try await repository.fetchRules()
-
         } catch {
-
             print(error)
         }
     }
@@ -42,13 +39,9 @@ final class RuleListViewModel: ObservableObject {
         guard let id = rule.id else{ return }
 
         do {
-
             try await repository.deleteRule(id: id)
-
             rules.remove(atOffsets: offsets)
-
         } catch {
-
             print(error)
         }
     }
@@ -58,13 +51,9 @@ final class RuleListViewModel: ObservableObject {
         let updatedRule = Rule(id: rule.id, name: rule.name, isActive: !rule.isActive, condition: rule.condition, action: rule.action,createdAt: rule.createdAt)
 
         do {
-
             try await repository.updateRule(updatedRule)
-
             await loadRules()
-
         } catch {
-
             print(error)
         }
     }
